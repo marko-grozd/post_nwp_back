@@ -1,5 +1,7 @@
 package semc.nwp.Post.demo.service.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
@@ -28,6 +30,7 @@ public class Adresa implements Serializable {
 
 	//bi-directional many-to-one association to Korisnik
 	@OneToMany(mappedBy="adresa")
+	@JsonIgnore
 	private List<Korisnik> korisniks;
 
 	public Adresa() {
