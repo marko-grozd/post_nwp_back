@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import semc.nwp.Post.demo.service.PostService;
-import semc.nwp.Post.demo.service.model.Grad;
+import semc.nwp.Post.demo.model.Grad;
 
 @RestController
 @RequestMapping("post")

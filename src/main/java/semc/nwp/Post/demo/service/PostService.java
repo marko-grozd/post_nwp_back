@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import semc.nwp.Post.demo.repository.CityRepo;
-import semc.nwp.Post.demo.service.model.Grad;
+import semc.nwp.Post.demo.model.Grad;
 
 @Service
 public class PostService {

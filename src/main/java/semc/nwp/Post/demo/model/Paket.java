@@ -1,4 +1,4 @@
-package semc.nwp.Post.demo.service.model;
+package semc.nwp.Post.demo.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
