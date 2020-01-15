@@ -89,4 +89,15 @@ public class Pismo implements Serializable {
 		this.korisnik2 = korisnik2;
 	}
 
+	@Override
+	public String toString() {
+		return "Pismo{" +
+				"idpismo=" + idpismo +
+				", datumPrijema=" + datumPrijema +
+				", datumPrispeca=" + datumPrispeca +
+				", preporuceno=" + preporuceno +
+				", korisnik1=" + korisnik1 +
+				", korisnik2=" + korisnik2 +
+				'}';
+	}
 }

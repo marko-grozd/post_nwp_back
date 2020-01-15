@@ -21,4 +21,9 @@ public class KorisnikService {
     public List<Korisnik> allUsers() {
         return userRepo.findAll();
     }
+    
+    public Korisnik findById(int id) {
+    	return userRepo.findById(id)
+    			.orElse(null);
+    }
 }

@@ -2,6 +2,9 @@ package semc.nwp.Post.demo.model;
 
 import java.io.Serializable;
 import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.List;
 
 
@@ -36,10 +39,12 @@ public class Korisnik implements Serializable {
 
 	//bi-directional many-to-one association to FinansijksaTransakcija
 	@OneToMany(mappedBy="korisnik1")
+	@JsonIgnore
 	private List<FinansijksaTransakcija> finansijksaTransakcijas1;
 
 	//bi-directional many-to-one association to FinansijksaTransakcija
 	@OneToMany(mappedBy="korisnik2")
+	@JsonIgnore
 	private List<FinansijksaTransakcija> finansijksaTransakcijas2;
 
 	//bi-directional many-to-one association to Adresa
@@ -48,18 +53,22 @@ public class Korisnik implements Serializable {
 
 	//bi-directional many-to-one association to Paket
 	@OneToMany(mappedBy="korisnik1")
+	@JsonIgnore
 	private List<Paket> pakets1;
 
 	//bi-directional many-to-one association to Paket
 	@OneToMany(mappedBy="korisnik2")
+	@JsonIgnore
 	private List<Paket> pakets2;
 
 	//bi-directional many-to-one association to Pismo
 	@OneToMany(mappedBy="korisnik1")
+	@JsonIgnore
 	private List<Pismo> pismos1;
 
 	//bi-directional many-to-one association to Pismo
 	@OneToMany(mappedBy="korisnik2")
+	@JsonIgnore
 	private List<Pismo> pismos2;
 
 	public Korisnik() {
