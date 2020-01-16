@@ -5,7 +5,11 @@ import org.springframework.stereotype.Repository;
 
 import semc.nwp.Post.demo.model.Adresa;
 
+import java.util.List;
+
 @Repository
 public interface AddressRepo extends JpaRepository<Adresa, Integer> {
+
+    public List<Adresa> findByGradPostanskiBroj(int idGrad);
 
 }

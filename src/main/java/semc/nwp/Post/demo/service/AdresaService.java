@@ -25,4 +25,14 @@ public class AdresaService {
     public void add(Adresa adresa) {
         addressRepo.save(adresa);
     }
+
+    /*By{atributKlaseAdresa}{atributKlaseGrad}*/
+    public List<Adresa> getByCityId(int cityId) {
+        return addressRepo.findByGradPostanskiBroj(cityId);
+    }
+
+    public Adresa getById(int adrid) {
+        return addressRepo.findById(adrid)
+                .orElse(null);
+    }
 }

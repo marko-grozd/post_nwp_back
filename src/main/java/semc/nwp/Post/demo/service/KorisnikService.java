@@ -26,4 +26,14 @@ public class KorisnikService {
     	return userRepo.findById(id)
     			.orElse(null);
     }
+
+    public String insertKorisnik(Korisnik korisnik) {
+        try {
+            userRepo.save(korisnik);
+            return "Uspesno";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "Greska";
+        }
+    }
 }
