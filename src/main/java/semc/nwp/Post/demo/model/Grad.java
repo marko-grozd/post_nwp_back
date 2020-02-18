@@ -25,6 +25,12 @@ public class Grad implements Serializable {
 
 	private String okrug;
 
+	@Column(name="geografska_duzina")
+	private String geografskaDuzina;
+
+	@Column(name="geografska_sirina")
+	private String geografskaSirina;
+
 	@Column(name="statisticki_region")
 	private String statistickiRegion;
 
@@ -34,6 +40,22 @@ public class Grad implements Serializable {
 	private List<Adresa> adresas;
 
 	public Grad() {
+	}
+
+	public String getGeografskaDuzina() {
+		return geografskaDuzina;
+	}
+
+	public void setGeografskaDuzina(String geografskaDuzina) {
+		this.geografskaDuzina = geografskaDuzina;
+	}
+
+	public String getGeografskaSirina() {
+		return geografskaSirina;
+	}
+
+	public void setGeografskaSirina(String geografskaSirina) {
+		this.geografskaSirina = geografskaSirina;
 	}
 
 	public int getPostanskiBroj() {
